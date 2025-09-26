@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+build/
+dist/
+.out/
+.next/
+.temp/
+.tmp/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Coverage
+coverage/
+
+# Env
+.env
+.env.*
+
+# Misc
+*.local
+*.cache/
+.cache/
+
+# Production bundles
+*.tgz
+
+# Lockfiles (if you prefer not to commit all)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
