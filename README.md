@@ -133,14 +133,5 @@ cd mfes_16_18_vanila/container && npm run build
 - Verify remote entry points are accessible
 - Ensure both applications are running simultaneously
 
-## Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test both approaches
-5. Submit a pull request
 
-## License
-
-This project is for educational purposes demonstrating Module Federation with React 16 and 18.
