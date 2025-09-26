@@ -132,6 +132,3 @@ cd mfes_16_18_vanila/container && npm run build
 - Check browser console for Module Federation loading errors
 - Verify remote entry points are accessible
 - Ensure both applications are running simultaneously
-
-
-
