@@ -1,34 +1,79 @@
-# React 16 & 18 Module Federation Examples
 
-This repository contains two different approaches to implementing Module Federation with React 16 and React 18, demonstrating how to handle version compatibility between different React versions in a microfrontend architecture.
+# React Module Federation Monorepo: React 16, 18, and Context Sharing
+
+This repository demonstrates multiple approaches to microfrontends with React and Webpack Module Federation, including advanced context sharing between host and remote apps.
 
 ## Projects Overview
 
-### 1. `mfes_16_18_@modulefederation` - Module Federation Bridge Approach
-This project uses the `@module-federation/bridge-react` package to handle React version compatibility between the host (React 18) and remote (React 16) applications.
+### 1. `mfes_16_18_@modulefederation` — Module Federation Bridge Approach
+- **Host:** React 18.3.1
+- **Remote:** React 16.14.0
+- **Bridge:** Uses `@module-federation/bridge-react` for React version isolation
+- **Features:**
+   - Automatic React version isolation
+   - Shared dependencies management
+   - Independent React instances per microfrontend
 
-**Architecture:**
-- **Container (Host)**: React 18.3.1 - serves as the main application
-- **Products (Remote)**: React 16.14.0 - exposes a products microfrontend
-- **Bridge**: Uses `@module-federation/bridge-react` to manage React version isolation
+### 2. `mfes_16_18_vanila` — Vanilla Module Federation Approach
+- **Host:** React 18.3.1
+- **Remote:** React 16.14.0
+- **No Bridge:** Direct Module Federation
+- **Features:**
+   - Manual React version management
+   - No extra bridge libraries
+   - Each app bundles its own React
 
-**Key Features:**
-- React version isolation using Module Federation Bridge
-- Shared dependencies management
-- Independent React instances per microfrontend
+### 3. `mfe_16_18_context` — React 18 Host, React 16 Remote, Shared Context
+- **Host:** React 18
+- **Remote:** React 16
+- **Shared Context:** Both apps consume a context from a local `shared-context` package
+- **Features:**
+   - Demonstrates context sharing across React versions
+   - Context value can be displayed and updated from either app
+   - Uses Module Federation singleton for `shared-context` (React is not shared)
 
-### 2. `mfes_16_18_vanila` - Vanilla Module Federation Approach
-This project demonstrates a vanilla Module Federation setup without additional bridge libraries, showing how React 16 and 18 can coexist.
+### 4. `mfes_18_18` — React 18 Host & Remote, Shared Context
+- **Host:** React 18
+- **Remote:** React 18
+- **Shared Context:** Both apps consume a context from a local `shared-context` package
+- **Features:**
+   - Both apps use the same React version
+   - Context value can be displayed and updated from either app
+   - Uses Module Federation singleton for `react`, `react-dom`, and `shared-context`
 
-**Architecture:**
-- **Container (Host)**: React 18.3.1 - serves as the main application
-- **Products (Remote)**: React 16.14.0 - exposes a products microfrontend
-- **No Bridge**: Direct Module Federation implementation
+## Prerequisites
+- Node.js 18+
+- npm or yarn
 
-**Key Features:**
-- Direct Module Federation without additional libraries
-- Independent React versions per microfrontend
-- Manual React version management
+## Quick Start
+
+Each project has its own README with detailed install, run, and build instructions. The general workflow is:
+
+1. Install dependencies and build the shared-context package (if present):
+    ```bash
+    cd <project>/shared-context && yarn install && yarn build
+    cd <project>/container && yarn install
+    cd <project>/products && yarn install
+    ```
+2. Start both apps (in separate terminals):
+    ```bash
+    cd <project>/products && yarn start
+    cd <project>/container && yarn start
+    ```
+3. Access the host app (see project README for port info)
+
+## Key Learnings
+- **React version isolation:** Use a bridge or manual config to run different React versions side-by-side
+- **Context sharing:** Use a local package and Module Federation singleton to share context between host and remote
+- **Module Federation:** Enables runtime composition of microfrontends with independent deployments
+
+## Troubleshooting
+- Ensure ports are available and not in use
+- Always build the shared-context package before running host/remote
+- If you see React hook or context errors, check that only one copy of React is loaded (singleton config)
+
+---
+See each subproject's README for more details and usage instructions.
 
 ## Prerequisites
 
