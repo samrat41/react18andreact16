@@ -2956,6 +2956,13 @@ react@16.14.0:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
 
+react@18.3.1:
+  version "18.3.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.3.1.tgz#49ab892009c53933625bd16b2533fc754cab2891"
+  integrity sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==
+  dependencies:
+    loose-envify "^1.1.0"
+
 readable-stream@^2.0.1:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.8.tgz#91125e8042bba1b9887f49345f6277027ce8be9b"
@@ -3216,10 +3223,10 @@ shallow-clone@^3.0.0:
   dependencies:
     kind-of "^6.0.2"
 
-"shared-context@file:../shared-context":
+"shared-context-legacy@file:../shared-context-legacy":
   version "1.0.0"
   dependencies:
-    react "16.14.0"
+    react "18.3.1"
 
 shebang-command@^2.0.0:
   version "2.0.0"

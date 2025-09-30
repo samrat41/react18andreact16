@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppContext } from 'shared-context';
+import { useAppContext } from 'shared-context-legacy';
 
 const ContextValueDisplay = () => {
   const context = useAppContext();

@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "shared-context": "file:../shared-context"
+  "shared-context-legacy": "file:../shared-context-legacy"
   },
   "devDependencies": {
     "@babel/core": "7.25.2",

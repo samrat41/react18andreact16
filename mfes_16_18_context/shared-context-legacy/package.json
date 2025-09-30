@@ -2,7 +2,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.js"
   },
-  "name": "shared-context",
+  "name": "shared-context-legacy",
   "version": "1.0.0",
   "main": "dist/index.js",
   "private": true,

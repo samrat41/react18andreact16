@@ -22,20 +22,7 @@ const ProductsApp = () => {
     <div className="products-container">
       <h2 className="products-header">Products Remote (React {React.version})</h2>
       {/* <ContextValueDisplay /> */}
-      <ul className="products-list">
-        {products.map(product => (
-          <li key={product.id} className="product-item">
-            <div className="product-name">{product.name}</div>
-            <div className="product-price">{product.price}</div>
-            <button 
-              className="add-button"
-              onClick={() => handleAddToCart(product)}
-            >
-              Add to Cart
-            </button>
-          </li>
-        ))}
-      </ul>
+      
     </div>
   );
 };

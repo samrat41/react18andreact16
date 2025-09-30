@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { AppContextProvider, useAppContext } from "shared-context";
+import { AppContextProvider, useAppContext } from "shared-context-legacy";
 import RemoteProducts from './RemoteProducts';
 
 const ContextValueDisplay = () => {

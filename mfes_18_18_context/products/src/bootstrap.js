@@ -15,6 +15,6 @@ const ProductsApp = () => {
   );
 };
 
-const root = createRoot(document.getElementById('root'));
-root.render(<ProductsApp />);
+// const root = createRoot(document.getElementById('root'));
+// root.render(<ProductsApp />);
 export default ProductsApp;

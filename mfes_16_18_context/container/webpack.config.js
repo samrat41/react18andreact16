@@ -16,7 +16,7 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        exclude: /node_modules\/(?!shared-context)/,
+  exclude: /node_modules\/(?!shared-context-legacy)/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -42,7 +42,7 @@ module.exports = {
       shared: {
         //         react: { singleton: true },
         // 'react-dom': { singleton: true },
-        'shared-context': { singleton: true, requiredVersion: false }
+  'shared-context-legacy': { singleton: true, requiredVersion: false }
       }
     })
   ],
