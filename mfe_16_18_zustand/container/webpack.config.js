@@ -37,7 +37,7 @@ module.exports = {
     new webpack.container.ModuleFederationPlugin({
       name: 'container',
       remotes: {
-        products: 'products@http://localhost:8081/remoteEntry.js'
+        products: 'products@http://localhost:3031/remoteEntry.js'
       },
       shared: {
   'zustand-shared-context': { singleton: true, requiredVersion: false },
@@ -46,7 +46,7 @@ module.exports = {
     })
   ],
   devServer: {
-    port: 8080,
+    port: 3030,
     historyApiFallback: true,
     static: {
       directory: path.resolve(__dirname, 'public')

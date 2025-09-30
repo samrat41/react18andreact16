@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index.js',
   mode: 'development',
   devServer: {
-    port: 8082,
+    port: 3060,
     historyApiFallback: true,
   },
   output: {
@@ -31,7 +31,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'container',
       remotes: {
-        products: 'products@http://localhost:8083/remoteEntry.js',
+        products: 'products@http://localhost:3061/remoteEntry.js',
       },
       shared: {
         react: { singleton: true },

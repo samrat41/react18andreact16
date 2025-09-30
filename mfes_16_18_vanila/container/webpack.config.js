@@ -37,7 +37,7 @@ module.exports = {
     new webpack.container.ModuleFederationPlugin({
       name: 'container',
       remotes: {
-        products: 'products@http://localhost:8081/remoteEntry.js'
+        products: 'products@http://localhost:3051/remoteEntry.js'
       },
       shared: {
         // Keep React 18 singleton in container only; do not force singleton across remotes
@@ -47,7 +47,7 @@ module.exports = {
     })
   ],
   devServer: {
-    port: 8080,
+    port: 3050,
     historyApiFallback: true,
     static: {
       directory: path.resolve(__dirname, 'public')

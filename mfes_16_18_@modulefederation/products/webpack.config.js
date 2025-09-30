@@ -43,7 +43,7 @@ module.exports = {
     })
   ],
   devServer: {
-    port: 8081,
+    port: 3041,
     historyApiFallback: true,
     static: {
       directory: path.resolve(__dirname, 'public')

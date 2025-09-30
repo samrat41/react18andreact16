@@ -37,12 +37,12 @@ module.exports = {
     new webpack.container.ModuleFederationPlugin({
       name: 'container',
       remotes: {
-        products: 'products@http://localhost:8081/remoteEntry.js'
+        products: 'products@http://localhost:3041/remoteEntry.js'
       }
     })
   ],
   devServer: {
-    port: 8080,
+    port: 3040,
     historyApiFallback: true,
     static: {
       directory: path.resolve(__dirname, 'public')

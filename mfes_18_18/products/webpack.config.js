@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index.js',
   mode: 'development',
   devServer: {
-    port: 8083,
+    port: 3061,
     historyApiFallback: true,
   },
   output: {
