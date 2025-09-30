@@ -1,0 +1,18 @@
+.zustand-value-container {
+  margin: 16px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.zustand-value-badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 10px;
+  background: #f3f7e7;
+  border-radius: 5px;
+  font-weight: 500;
+  color: #4b5e1e;
+  font-size: 16px;
+  border: none;
+  box-shadow: none;
+}
